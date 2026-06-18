@@ -1,248 +1,278 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دکتر لیلا یاری | دکتری پیراپزشکی گرایش پوست و مو</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        :root {
-            --primary: #0d9488;
-            --primary-light: #ccfbf1;
-            --secondary: #0f766e;
-            --dark: #1e293b;
-            --gray-text: #475569;
-            --bg-body: #fafaf9;
-            --bg-card: #ffffff;
-        }
+<title>دکتر لیلا یاری | پوست و مو</title>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Tahoma, sans-serif;
-        }
+<style>
+:root{
+    --primary:#0d9488;
+    --secondary:#0f766e;
+    --dark:#1e293b;
+    --gray:#475569;
+    --bg:#fafaf9;
+    --card:#fff;
+}
 
-        body {
-            background-color: var(--bg-body);
-            color: var(--dark);
-            line-height: 1.8;
-        }
+/* پایه */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:tahoma;
+}
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            background: var(--bg-card);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+body{
+    background:var(--bg);
+    color:var(--dark);
+    line-height:1.9;
+    animation: fadeIn 1s ease-in;
+}
 
-        .logo {
-            font-weight: bold;
-            color: var(--secondary);
-        }
+/* انیمیشن ورود */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
 
-        nav a {
-            margin: 0 12px;
-            text-decoration: none;
-            color: var(--gray-text);
-        }
+/* هدر */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:var(--card);
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    animation: slideDown 0.8s ease;
+}
 
-        nav a:hover {
-            color: var(--primary);
-        }
+@keyframes slideDown{
+    from{transform:translateY(-100px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
 
-        .btn-contact-top {
-            background: var(--primary);
-            color: #fff;
-            padding: 8px 18px;
-            border-radius: 40px;
-            text-decoration: none;
-        }
+.logo{
+    color:var(--secondary);
+    font-weight:bold;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+nav a{
+    margin:0 12px;
+    text-decoration:none;
+    color:var(--gray);
+    transition:0.3s;
+}
 
-        .bio-section {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 30px;
-            background: var(--bg-card);
-            padding: 40px;
-            border-radius: 20px;
-        }
+nav a:hover{
+    color:var(--primary);
+    transform:scale(1.1);
+}
 
-        .image-placeholder img,
-        .poster-placeholder img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
+.btn{
+    background:var(--primary);
+    color:#fff;
+    padding:8px 18px;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.3s;
+}
 
-        .image-placeholder {
-            aspect-ratio: 3/4;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #eee;
-        }
+.btn:hover{
+    background:var(--secondary);
+    transform:scale(1.05);
+}
 
-        .bio-info h1 {
-            color: var(--secondary);
-        }
+/* کانتینر */
+.container{
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+}
 
-        .bio-info h2 {
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
+/* کارت‌ها */
+.card{
+    background:var(--card);
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.05);
+    transition:0.4s;
+}
 
-        .section-title {
-            margin: 30px 0 20px;
-            font-size: 22px;
-            border-right: 4px solid var(--primary);
-            padding-right: 10px;
-        }
+.card:hover{
+    transform:translateY(-8px);
+}
 
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+/* بیو */
+.bio{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:30px;
+    margin-bottom:50px;
+    animation: fadeIn 1.2s ease;
+}
 
-        .book-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 12px;
-        }
+.bio img{
+    width:100%;
+    border-radius:15px;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    transition:0.4s;
+}
 
-        .media-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
+.bio img:hover{
+    transform:scale(1.03);
+}
 
-        .poster-box {
-            background: #fff;
-            padding: 15px;
-            border-radius: 12px;
-        }
+h1{
+    color:var(--secondary);
+    margin-bottom:10px;
+}
 
-        .poster-placeholder {
-            aspect-ratio: 4/5;
-            overflow: hidden;
-            border-radius: 10px;
-            background: #eee;
-        }
+h2{
+    color:var(--primary);
+    margin-bottom:15px;
+}
 
-        .contact-section {
-            margin-top: 40px;
-            background: var(--secondary);
-            color: #fff;
-            padding: 40px;
-            border-radius: 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
+/* سکشن عنوان */
+.title{
+    font-size:22px;
+    margin:30px 0 20px;
+    border-right:4px solid var(--primary);
+    padding-right:10px;
+}
 
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 20px;
-            color: var(--gray-text);
-        }
+/* کتاب‌ها */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
 
-        @media(max-width:768px){
-            .bio-section,
-            .contact-section{
-                grid-template-columns:1fr;
-            }
+.book:hover{
+    transform:scale(1.03);
+}
 
-            .media-grid{
-                grid-template-columns:1fr;
-            }
-        }
-    </style>
+/* پوستر */
+.posters{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.posters img{
+    width:100%;
+    border-radius:12px;
+    transition:0.4s;
+}
+
+.posters img:hover{
+    transform:scale(1.05);
+}
+
+/* تماس */
+.contact{
+    margin-top:40px;
+    background:var(--secondary);
+    color:#fff;
+    padding:40px;
+    border-radius:20px;
+    animation: fadeIn 1.5s ease;
+}
+
+/* موبایل */
+@media(max-width:768px){
+    .bio{grid-template-columns:1fr;}
+    .posters{grid-template-columns:1fr;}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">کلینیک دکتر لیلا یاری</div>
+    <div class="logo">✨ کلینیک دکتر لیلا یاری</div>
+
     <nav>
         <a href="#bio">بیوگرافی</a>
         <a href="#books">کتاب‌ها</a>
         <a href="#posters">پوسترها</a>
         <a href="#contact">تماس</a>
     </nav>
-    <a class="btn-contact-top" href="tel:09387501473">تماس</a>
+
+    <a class="btn" href="tel:09387501473">تماس سریع</a>
 </header>
 
 <div class="container">
 
-    <section id="bio" class="bio-section">
-        <div class="image-placeholder">
-            <img src="images/1.png" alt="doctor">
-        </div>
+<!-- BIO -->
+<section id="bio" class="bio card bio">
+    <img src="images/1.png" alt="doctor">
 
-        <div class="bio-info">
-            <h1>دکتر لیلا یاری</h1>
-            <h2>دکتری پیراپزشکی پوست و مو</h2>
-            <p>
-                متخصص پوست و مو با رویکرد علمی و مراقبت‌های نوین.
-            </p>
-        </div>
-    </section>
+    <div>
+        <h1>دکتر لیلا یاری</h1>
+        <h2>متخصص پوست و مو | دکتری پیراپزشکی</h2>
 
-    <h3 id="books" class="section-title">کتاب‌ها</h3>
+        <p>
+            دکتر لیلا یاری با بیش از سال‌ها تجربه در حوزه مراقبت‌های تخصصی پوست،
+            به ارائه روش‌های علمی و نوین درمانی برای مشکلات پوستی می‌پردازد.
+            تمرکز ایشان بر درمان آکنه، لک‌های پوستی، جوانسازی و مراقبت‌های زیبایی است.
 
-    <section class="books-grid">
-        <div class="book-card">
-            <h4>جلد اول</h4>
-            <p>انواع جوش‌ها</p>
-        </div>
+            <br><br>
 
-        <div class="book-card">
-            <h4>جلد دوم</h4>
-            <p>مراقبت پوست</p>
-        </div>
-    </section>
+            هدف این مجموعه ارائه خدماتی است که علاوه بر زیبایی، سلامت واقعی پوست را
+            بر اساس ساختار ژنتیکی و بیولوژیکی هر فرد تضمین کند.
+        </p>
+    </div>
+</section>
 
-    <h3 id="posters" class="section-title">پوسترها</h3>
+<!-- BOOKS -->
+<h3 class="title">کتاب‌ها و آثار تالیفی</h3>
 
-    <section class="media-grid">
-        <div class="poster-box">
-            <div class="poster-placeholder">
-                <img src="images/2.png" alt="poster1">
-            </div>
-        </div>
+<section class="grid">
 
-        <div class="poster-box">
-            <div class="poster-placeholder">
-                <img src="images/3.png" alt="poster2">
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div>
-            <h3>تماس</h3>
-            <p>09387501473</p>
-            <p>تهران، پاسداران</p>
-        </div>
-    </section>
-
+<div class="card book">
+    <h3>جلد اول</h3>
+    <p>انواع جوش‌ها — از پیشگیری تا درمان تخصصی</p>
 </div>
 
-<footer>
-    © کلینیک دکتر لیلا یاری
-</footer>
+<div class="card book">
+    <h3>جلد دوم</h3>
+    <p>اگر دوستت حرف می‌زد — نگاه علمی به مراقبت پوست</p>
+</div>
+
+</section>
+
+<!-- POSTERS -->
+<h3 class="title">پوسترها و خدمات</h3>
+
+<section class="posters">
+
+<img src="images/2.png" alt="poster1">
+<img src="images/3.png" alt="poster2">
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+<h2>تماس با کلینیک</h2>
+<p>📞 09387501473</p>
+<p>📍 تهران، پاسداران، بوستان پنجم</p>
+
+<br>
+
+<a class="btn" href="https://nshn.ir/7bvrCxpxuD7K" target="_blank">
+مشاهده لوکیشن
+</a>
+
+</section>
+
+</div>
 
 </body>
 </html>

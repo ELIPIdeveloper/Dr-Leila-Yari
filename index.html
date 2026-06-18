@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دکتر لیلا یاری | دکتری پیراپزشکی گرایش پوست و مو</title>
+    <style>
+        :root {
+            --primary: #0d9488;       /* رنگ اصلی کلینیکال - سبز تال */
+            --primary-light: #ccfbf1; /* پس‌زمینه روشن */
+            --secondary: #0f766e;     /* سبز تیره برای متن‌های مهم */
+            --dark: #1e293b;          /* رنگ متن اصلی */
+            --gray-text: #475569;     /* رنگ متن فرعی */
+            --bg-body: #fafaf9;       /* پس‌زمینه تمیز و پاکیزه */
+            --bg-card: #ffffff;       /* پس‌زمینه سفید کارت‌ها */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tahoma', 'Segoe UI', Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        /* هدر سایت */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: var(--bg-card);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--gray-text);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .btn-contact-top {
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-contact-top:hover {
+            background-color: var(--secondary);
+        }
+
+        /* ساختار اصلی */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* بخش بیوگرافی پزشک */
+        .bio-section {
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .bio-section { grid-template-columns: 1fr; text-align: center; }
+            .media-grid { grid-template-columns: 1fr !important; }
+        }
+
+        .image-placeholder {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background-color: #f1f5f9;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #94a3b8;
+            font-weight: bold;
+        }
+
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .bio-info h1 {
+            font-size: 32px;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .bio-info h2 {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .bio-info p {
+            color: var(--gray-text);
+            text-align: justify;
+        }
+
+        /* بخش عناوین کتاب‌ها و پوسترها */
+        .section-title {
+            font-size: 24px;
+            color: var(--secondary);
+            margin-bottom: 25px;
+            border-right: 5px solid var(--primary);
+            padding-right: 15px;
+        }
+
+        /* بخش کتاب‌ها */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .book-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f0fdfa 100%);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+            border-right: 4px solid var(--primary);
+        }
+
+        .book-vol {
+            font-size: 14px;
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .book-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        /* بخش گالری و پوسترها */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .poster-box {
+            background-color: var(--bg-card);
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+            text-align: center;
+        }
+
+        .poster-placeholder {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background-color: #f1f5f9;
+            border: 2px dashed #cbd5e1;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+
+        .poster-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        /* بخش تماس و اطلاعات مطب */
+        .contact-section {
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .contact-section { grid-template-columns: 1fr; }
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-location {
+            display: inline-block;
+            background-color: white;
+            color: var(--secondary);
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: opacity 0.3s;
+        }
+
+        .btn-location:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray-text);
+            font-size: 14px;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">✨ کلینیک تخصصی دکتر لیلا یاری</div>
+        <nav>
+            <a href="#bio">بیوگرافی</a>
+            <a href="#books">تالیفات و کتاب‌ها</a>
+            <a href="#posters">پوسترها و گالری</a>
+            <a href="#contact">اطلاعات تماس</a>
+        </nav>
+        <a href="tel:09387501473" class="btn-contact-top">تماس و مشاوره</a>
+    </header>
+
+    <div class="container">
+        
+        <section id="bio" class="bio-section">
+            <div class="image-placeholder">
+                <span style="font-size: 40px;">👤</span>
+                <span>تصویر بیوگرافی (1.png)</span>
+            </div>
+            <div class="bio-info">
+                <h1>دکتر لیلا یاری</h1>
+                <h2>دکتری پیراپزشکی گرایش پوست و مو</h2>
+                <p>به کلینیک و پلتفرم تخصصی سلامت و زیبایی پوست و مو خوش آمدید. دکتر لیلا یاری با تکیه بر تخصص پیراپزشکی و سال‌ها تجربه در تالیف کتب مرجع آموزشی در حوزه پوست، بهترین راهکارهای درمانی و مراقبتی را متناسب با ساختار ژنتیکی و بیولوژیکی پوست شما ارائه می‌دهد.</p>
+            </div>
+        </section>
+
+        <h3 id="books" class="section-title">کتاب‌ها و آثار تالیفی</h3>
+        <section class="books-grid">
+            <div class="book-card">
+                <div class="book-vol">جلد اول</div>
+                <div class="book-title">انواع جوش‌ها (از پیشگیری تا درمان)</div>
+                <p style="color: var(--gray-text); font-size: 14px;">راهنمای جامع تخصصی جهت شناسایی، پیشگیری بیرونی و درونی و متدهای نوین کلینیکی درمان انواع آکنه و جوش‌های پوستی.</p>
+            </div>
+            <div class="book-card">
+                <div class="book-vol">جلد دوم</div>
+                <div class="book-title">اگر دوستت حرف می‌زد</div>
+                <p style="color: var(--gray-text); font-size: 14px;">(روزهایی که هیچ کس ساده به تو نمی گوید)؛ نگاهی عمیق، صمیمی و علمی به رازها و مراقبت‌های روزمره‌ای که برای سلامت پایدار پوست به آن‌ها نیاز دارید.</p>
+            </div>
+        </section>
+
+        <h3 id="posters" class="section-title">پوسترها و خدمات کلینیک</h3>
+        <section class="media-grid">
+            <div class="poster-box">
+                <div class="poster-placeholder">
+                    <span style="font-size: 40px;">🖼️</span>
+                    <span>پوستر شماره یک (2.png)</span>
+                </div>
+                <h4 style="color: var(--secondary)">راهکارهای نوین جوانسازی</h4>
+            </div>
+            <div class="poster-box">
+                <div class="poster-placeholder">
+                    <span style="font-size: 40px;">🖼️</span>
+                    <span>پوستر شماره دو (3.png)</span>
+                </div>
+                <h4 style="color: var(--secondary)">مشاوره تخصصی و درمانی</h4>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-info">
+                <h3>ارتباط با مطب و مشاوره آنلاین</h3>
+                <div class="contact-item">📞 <strong>شماره پاسخگویی و مشاوره:</strong> 09387501473</div>
+                <div class="contact-item">📍 <strong>آدرس مطب:</strong> تهران، پاسداران، بوستان پنجم، ساختمان ارشیا، واحد ۳</div>
+            </div>
+            <div style="text-align: center;">
+                <p style="margin-bottom: 15px; opacity: 0.9;">جهت مسیریابی آسان و مشاهده دقیق موقعیت کلینیک بر روی نقشه نشان، از دکمه زیر استفاده نمایید:</p>
+                <a href="https://nshn.ir/7bvrCxpxuD7K" target="_blank" class="btn-location">🗺️ مشاهده لوکیشن مطب روی نقشه نشان</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        حقوق مادی و معنوی این پلتفرم متعلق به کلینیک تخصصی دکتر لیلا یاری می‌باشد.
+    </footer>
+
+</body>
+                  </html>
+                  

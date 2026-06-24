@@ -4,15 +4,25 @@
   <link rel="icon" href="images/1.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="دکتر لیلا یاری با بیش از سال‌ها تجربه در حوزه مراقبت‌های تخصصی پوست، به ارائه روش‌های علمی و نوین درمانی برای مشکلات پوستی می‌پردازد.">
-  <title>دکتر لیلا یاری | متخصص پوست و مو</title>
 
+  <meta name="description" content="دکتر لیلا یاری با بیش از سال‌ها تجربه در حوزه مراقبت‌های تخصصی پوست، به ارائه روش‌های علمی و نوین درمانی برای مشکلات پوستی می‌پردازد. تمرکز ایشان بر درمان آکنه، لک‌های پوستی، جوانسازی و مراقبت‌های زیبایی است.">
+
+  <title>دکتر لیلا یاری | پوست و مو</title>
+
+  <!-- Open Graph -->
   <meta property="og:title" content="دکتر لیلا یاری | پوست و مو">
-  <meta property="og:description" content="دکتر لیلا یاری متخصص پوست و مو — درمان آکنه، لک و جوانسازی پوست">
+  <meta property="og:description" content="دکتر لیلا یاری با بیش از سال‌ها تجربه در حوزه مراقبت‌های تخصصی پوست، به ارائه روش‌های علمی و نوین درمانی برای مشکلات پوستی می‌پردازد.">
   <meta property="og:image" content="images/1.png">
   <meta property="og:type" content="profile">
   <meta property="og:locale" content="fa_IR">
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="دکتر لیلا یاری | پوست و مو">
+  <meta name="twitter:description" content="دکتر لیلا یاری متخصص پوست و مو">
+  <meta name="twitter:image" content="images/1.png">
+
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -20,503 +30,153 @@
     "name": "دکتر لیلا یاری",
     "image": "images/1.png",
     "jobTitle": "متخصص پوست و مو",
+    "birthPlace": "همدان، ایران",
+    "birthDate": "1988-02-18",
     "url": "https://your-website.com",
+    "brand": {
+      "@type": "Brand",
+      "name": "ELIPI"
+    },
     "description": "متخصص پوست و مو با تمرکز بر درمان آکنه، لک و جوانسازی پوست"
   }
   </script>
 
 <style>
-:root {
-  --teal:        #0a7c75;
-  --teal-dark:   #065e58;
-  --teal-light:  #e0f4f2;
-  --rose:        #c9847a;
-  --rose-light:  #f7eeec;
-  --ivory:       #fdf8f3;
-  --charcoal:    #1a2332;
-  --gray:        #64748b;
-  --gray-light:  #f1f5f9;
-  --white:       #ffffff;
-  --shadow-sm:   0 2px 12px rgba(10,124,117,0.08);
-  --shadow-md:   0 8px 32px rgba(10,124,117,0.12);
-  --radius-sm:   10px;
-  --radius-md:   18px;
-  --radius-lg:   28px;
+:root{
+  --primary:#0d9488;
+  --secondary:#0f766e;
+  --dark:#1e293b;
+  --gray:#475569;
+  --bg:#fafaf9;
+  --card:#fff;
 }
 
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:tahoma;
 }
 
-body {
-  font-family: Tahoma, sans-serif;
-  background: var(--ivory);
-  color: var(--charcoal);
-  line-height: 1.85;
-  font-size: 15px;
+body{
+  background:var(--bg);
+  color:var(--dark);
+  line-height:1.9;
 }
 
-/* ── HEADER ────────────────────────────────────── */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(253,248,243,0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(10,124,117,0.1);
-  padding: 0 6%;
-  height: 68px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:var(--card);
+  position:sticky;
+  top:0;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  font-size: 16px;
-  color: var(--teal-dark);
-  text-decoration: none;
+.logo{
+  color:var(--secondary);
+  font-weight:bold;
 }
 
-.logo-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--rose);
+nav a{
+  margin:0 12px;
+  text-decoration:none;
+  color:var(--gray);
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.btn{
+  background:var(--primary);
+  color:#fff;
+  padding:8px 18px;
+  border-radius:30px;
+  text-decoration:none;
 }
 
-nav a {
-  text-decoration: none;
-  color: var(--gray);
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 14px;
-  transition: background 0.2s, color 0.2s;
+.container{
+  max-width:1200px;
+  margin:40px auto;
+  padding:0 20px;
 }
 
-nav a:hover {
-  background: var(--teal-light);
-  color: var(--teal-dark);
+.card{
+  background:#fff;
+  border-radius:18px;
+  padding:30px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.05);
 }
 
-.btn-primary {
-  background: var(--teal);
-  color: var(--white);
-  padding: 9px 20px;
-  border-radius: 24px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  transition: background 0.2s, transform 0.15s;
-  white-space: nowrap;
+/* BIO UPDATED */
+.bio{
+  display:grid;
+  grid-template-columns:45% 55%;
+  gap:30px;
+  margin-bottom:50px;
 }
 
-.btn-primary:hover {
-  background: var(--teal-dark);
-  transform: translateY(-1px);
+.bio img{
+  width:45%;
+  border-radius:15px;
+  aspect-ratio:3/4;
+  object-fit:cover;
 }
 
-/* ── HERO ──────────────────────────────────────── */
-.hero {
-  display: grid;
-  grid-template-columns: 42% 58%;
-  min-height: 92vh;
-  overflow: hidden;
+/* BOOKS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
-.hero-image-panel {
-  position: relative;
-  background: var(--teal-dark);
-  overflow: hidden;
+.book{
+  text-align:center;
 }
 
-.hero-image-panel img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  opacity: 0.85;
-  mix-blend-mode: luminosity;
+.book img{
+  width:100%;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:15px;
+  transition:0.3s;
 }
 
-.hero-image-panel::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(10,94,88,0.5) 0%, transparent 60%);
+.book img:hover{
+  transform:scale(1.03);
 }
 
-.hero-content {
-  background: var(--ivory);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 80px 8% 80px 6%;
-  position: relative;
+.title{
+  font-size:22px;
+  margin:30px 0 20px;
+  border-right:4px solid var(--primary);
+  padding-right:10px;
 }
 
-.hero-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--teal-light);
-  color: var(--teal-dark);
-  font-size: 13px;
-  padding: 5px 14px;
-  border-radius: 20px;
-  margin-bottom: 24px;
-  width: fit-content;
+.posters{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
 }
 
-.hero-eyebrow-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--teal);
+.posters img{
+  width:100%;
+  border-radius:12px;
 }
 
-.hero h1 {
-  font-size: clamp(28px, 3.5vw, 46px);
-  font-weight: bold;
-  color: var(--charcoal);
-  line-height: 1.4;
-  margin-bottom: 10px;
+.contact{
+  margin-top:40px;
+  background:var(--secondary);
+  color:#fff;
+  padding:40px;
+  border-radius:20px;
 }
 
-.hero h1 span {
-  color: var(--teal);
-}
-
-.hero-subtitle {
-  font-size: 16px;
-  color: var(--rose);
-  margin-bottom: 22px;
-  font-weight: bold;
-}
-
-.hero-desc {
-  color: var(--gray);
-  font-size: 15px;
-  max-width: 480px;
-  margin-bottom: 36px;
-  line-height: 2;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.btn-outline {
-  border: 2px solid var(--teal);
-  color: var(--teal);
-  padding: 9px 20px;
-  border-radius: 24px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  transition: all 0.2s;
-}
-
-.btn-outline:hover {
-  background: var(--teal);
-  color: white;
-}
-
-.hero-stats {
-  display: flex;
-  gap: 32px;
-  margin-top: 48px;
-  padding-top: 32px;
-  border-top: 1px solid rgba(10,124,117,0.12);
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-}
-
-.stat-num {
-  font-size: 26px;
-  font-weight: bold;
-  color: var(--teal);
-  line-height: 1;
-}
-
-.stat-label {
-  font-size: 12px;
-  color: var(--gray);
-  margin-top: 4px;
-}
-
-/* ── CONTAINER ─────────────────────────────────── */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* ── SECTION HEADER ────────────────────────────── */
-.section-wrap {
-  padding: 70px 0;
-}
-
-.section-label {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 36px;
-}
-
-.section-label h2 {
-  font-size: 22px;
-  font-weight: bold;
-  color: var(--charcoal);
-}
-
-.section-label-line {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(to left, transparent, rgba(10,124,117,0.2));
-}
-
-.section-label-bar {
-  width: 4px;
-  height: 24px;
-  border-radius: 2px;
-  background: var(--rose);
-  flex-shrink: 0;
-}
-
-/* ── BOOKS ─────────────────────────────────────── */
-.books-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
-
-.book-card {
-  background: var(--white);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.25s, box-shadow 0.25s;
-  border: 1px solid rgba(10,124,117,0.06);
-}
-
-.book-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-}
-
-.book-card img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  display: block;
-}
-
-.book-info {
-  padding: 20px 22px;
-}
-
-.book-edition {
-  font-size: 12px;
-  color: var(--teal);
-  font-weight: bold;
-  margin-bottom: 6px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.book-info h3 {
-  font-size: 15px;
-  color: var(--charcoal);
-  line-height: 1.6;
-}
-
-/* ── POSTERS ───────────────────────────────────── */
-.posters-bg {
-  background: var(--gray-light);
-}
-
-.posters-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.poster-item {
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.25s;
-}
-
-.poster-item:hover {
-  transform: scale(1.02);
-}
-
-.poster-item img {
-  width: 100%;
-  display: block;
-}
-
-/* ── CONTACT ───────────────────────────────────── */
-.contact-section {
-  background: var(--teal-dark);
-  padding: 70px 0;
-}
-
-.contact-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.contact-text h2 {
-  font-size: 28px;
-  color: var(--white);
-  margin-bottom: 12px;
-}
-
-.contact-text p {
-  color: rgba(255,255,255,0.65);
-  font-size: 14px;
-  line-height: 2;
-}
-
-.contact-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.contact-card {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--radius-sm);
-  padding: 16px 20px;
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  color: var(--white);
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-.contact-card:hover {
-  background: rgba(255,255,255,0.12);
-}
-
-.contact-icon {
-  font-size: 20px;
-  line-height: 1;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.contact-card-label {
-  font-size: 12px;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 3px;
-}
-
-.contact-card-value {
-  font-size: 14px;
-  font-weight: bold;
-  direction: ltr;
-  text-align: right;
-}
-
-.contact-card-value.addr {
-  direction: rtl;
-  text-align: right;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-.btn-location {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--rose);
-  color: white;
-  padding: 11px 22px;
-  border-radius: 24px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 6px;
-  transition: background 0.2s;
-}
-
-.btn-location:hover {
-  background: #b5706a;
-}
-
-/* ── FOOTER ────────────────────────────────────── */
-footer {
-  text-align: center;
-  padding: 24px;
-  color: var(--gray);
-  font-size: 13px;
-  border-top: 1px solid rgba(0,0,0,0.06);
-}
-
-/* ── RESPONSIVE ────────────────────────────────── */
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    min-height: unset;
+@media(max-width:768px){
+  .bio{
+    grid-template-columns:1fr;
   }
-
-  .hero-image-panel {
-    height: 55vw;
-    min-height: 280px;
-  }
-
-  .hero-content {
-    padding: 48px 7%;
-  }
-
-  .contact-inner {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-}
-
-@media (max-width: 640px) {
-  header {
-    padding: 0 5%;
-  }
-
-  nav a { display: none; }
-
-  .posters-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-stats {
-    gap: 20px;
+  .posters{
+    grid-template-columns:1fr;
   }
 }
 </style>
@@ -524,12 +184,8 @@ footer {
 
 <body>
 
-<!-- ── HEADER ── -->
 <header>
-  <a class="logo" href="#">
-    <span class="logo-dot"></span>
-    کلینیک دکتر لیلا یاری
-  </a>
+  <div class="logo">✨ کلینیک دکتر لیلا یاری</div>
 
   <nav>
     <a href="#bio">بیوگرافی</a>
@@ -538,151 +194,63 @@ footer {
     <a href="#contact">تماس</a>
   </nav>
 
-  <a class="btn-primary" href="tel:+989387501473">📞 تماس سریع</a>
+  <a class="btn" href="tel:+989387501473">تماس سریع</a>
 </header>
 
+<div class="container">
 
-<!-- ── HERO / BIO ── -->
-<section id="bio" class="hero">
+<!-- BIO -->
+<section id="bio" class="bio img">
+  <img src="images/1.png" alt="دکتر لیلا یاری متخصص پوست و مو">
 
-  <div class="hero-image-panel">
-    <img src="images/1.png" alt="دکتر لیلا یاری متخصص پوست و مو">
-  </div>
+  <div>
+    <h2>دکتر لیلا یاری</h2>
+    <h3>دکتری پیراپزشکی گرایش پوست و زیبایی</h3>
 
-  <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span class="hero-eyebrow-dot"></span>
-      متخصص پوست و مو
-    </div>
-
-    <h1>دکتر <span>لیلا یاری</span></h1>
-    <p class="hero-subtitle">دکتری پیراپزشکی — گرایش پوست و زیبایی</p>
-
-    <p class="hero-desc">
-      با بیش از سال‌ها تجربه در حوزه مراقبت‌های تخصصی پوست،
-      روش‌های علمی و نوین درمانی برای مشکلات پوستی ارائه می‌دهم.
-      تمرکز اصلی بر درمان آکنه، لک‌های پوستی، جوانسازی و مراقبت‌های زیبایی است.
+    <p>
+      دکتر لیلا یاری با بیش از سال‌ها تجربه در حوزه مراقبت‌های تخصصی پوست،
+      به ارائه روش‌های علمی و نوین درمانی برای مشکلات پوستی می‌پردازد.
     </p>
+  </div>
+</section>
 
-    <div class="hero-actions">
-      <a class="btn-primary" href="#contact">رزرو نوبت</a>
-      <a class="btn-outline" href="#books">مشاهده آثار</a>
-    </div>
+<!-- BOOKS -->
+<h3 class="title">کتاب‌ها و آثار تالیفی</h3>
 
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-num">+۲</span>
-        <span class="stat-label">کتاب تخصصی</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">آکنه</span>
-        <span class="stat-label">تخصص اصلی</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">تهران</span>
-        <span class="stat-label">محل کلینیک</span>
-      </div>
-    </div>
+<section class="grid">
+
+  <div class="card book">
+    <img src="images/4.png" alt="کتاب انواع جوش‌ها">
+    <h3>جلد اول</h3>
+    <p>انواع جوش‌ها — از پیشگیری تا درمان</p>
+  </div>
+
+  <div class="card book">
+    <img src="images/5.png" alt="کتاب مراقبت پوست">
+    <h3>جلد دوم</h3>
+    <p>اگر پوستت حرف می‌زد — نگاه علمی به مراقبت پوست</p>
   </div>
 
 </section>
 
+<!-- POSTERS -->
+<h3 class="title">پوسترها</h3>
 
-<!-- ── BOOKS ── -->
-<section id="books" class="section-wrap">
-  <div class="container">
-
-    <div class="section-label">
-      <span class="section-label-bar"></span>
-      <h2>کتاب‌ها و آثار تالیفی</h2>
-      <span class="section-label-line"></span>
-    </div>
-
-    <div class="books-grid">
-
-      <div class="book-card">
-        <img src="images/4.png" alt="کتاب انواع جوش‌ها">
-        <div class="book-info">
-          <p class="book-edition">جلد اول</p>
-          <h3>انواع جوش‌ها — از پیشگیری تا درمان</h3>
-        </div>
-      </div>
-
-      <div class="book-card">
-        <img src="images/5.png" alt="کتاب مراقبت پوست">
-        <div class="book-info">
-          <p class="book-edition">جلد دوم</p>
-          <h3>اگر پوستت حرف می‌زد — نگاه علمی به مراقبت پوست</h3>
-        </div>
-      </div>
-
-    </div>
-  </div>
+<section class="posters">
+  <img src="images/2.png">
+  <img src="images/3.png">
 </section>
 
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>تماس با کلینیک</h2>
+  <p>📞 +989387501473</p>
+  <p>📍 تهران پاسداران بوستان پنجم ساختمان ارشیا واحد ۳</p>
 
-<!-- ── POSTERS ── -->
-<section id="posters" class="section-wrap posters-bg">
-  <div class="container">
-
-    <div class="section-label">
-      <span class="section-label-bar"></span>
-      <h2>پوسترها</h2>
-      <span class="section-label-line"></span>
-    </div>
-
-    <div class="posters-grid">
-      <div class="poster-item"><img src="images/2.png" alt="پوستر دکتر لیلا یاری"></div>
-      <div class="poster-item"><img src="images/3.png" alt="پوستر دکتر لیلا یاری"></div>
-    </div>
-
-  </div>
+  <a class="btn" href="https://nshn.ir/7bvrCxpxuD7K">لوکیشن</a>
 </section>
 
-
-<!-- ── CONTACT ── -->
-<section id="contact" class="contact-section">
-  <div class="contact-inner">
-
-    <div class="contact-text">
-      <h2>تماس با کلینیک</h2>
-      <p>
-        برای رزرو نوبت و مشاوره تخصصی پوست با ما در تماس باشید.
-        پاسخگوی شما هستیم.
-      </p>
-    </div>
-
-    <div class="contact-cards">
-
-      <a class="contact-card" href="tel:+989387501473">
-        <span class="contact-icon">📞</span>
-        <div>
-          <p class="contact-card-label">شماره تماس</p>
-          <p class="contact-card-value">+98 938 750 1473</p>
-        </div>
-      </a>
-
-      <div class="contact-card">
-        <span class="contact-icon">📍</span>
-        <div>
-          <p class="contact-card-label">آدرس کلینیک</p>
-          <p class="contact-card-value addr">تهران، پاسداران، بوستان پنجم، ساختمان ارشیا، واحد ۳</p>
-        </div>
-      </div>
-
-      <a class="btn-location" href="https://nshn.ir/7bvrCxpxuD7K" target="_blank" rel="noopener">
-        🗺️ مشاهده لوکیشن روی نقشه
-      </a>
-
-    </div>
-
-  </div>
-</section>
-
-
-<footer>
-  <p>© ۱۴۰۴ — کلینیک دکتر لیلا یاری · تمام حقوق محفوظ است</p>
-</footer>
+</div>
 
 </body>
 </html>
